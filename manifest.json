@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Sidekiq Queue Filter",
+  "version": "1.0",
+  "description": "Filter Sidekiq busy page by queue",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*/admin/sidekiq/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/admin/sidekiq/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

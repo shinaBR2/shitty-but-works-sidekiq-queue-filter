@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+      }
+      select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      .checkbox-wrapper {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="queueFilter">
+      <option value="all">All Queues</option>
+    </select>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="hideProcesses" />
+      <label for="hideProcesses">Hide processes table</label>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
